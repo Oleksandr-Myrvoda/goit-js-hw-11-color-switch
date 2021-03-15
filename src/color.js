@@ -28,11 +28,12 @@ const switchColor = {
             const color = randomIntegerFromInterval(0, colors.length - 1);          
             document.body.style.backgroundColor = colors[color];
         }, 1000);
-       
+       startBtn.classList.add('disabled');
     },
     stop() {
         clearInterval(this.intervalId);
         this.isActive = false;
+        startBtn.classList.remove('disabled');
     }
 }
 
